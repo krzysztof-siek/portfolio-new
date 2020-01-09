@@ -9,6 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
     toggleNavLinks = () => {
         navLinks.classList.toggle('close')
+        navBtn.classList.toggle('close')
     }
 
     navBtn.addEventListener('click', toggleNavLinks)
@@ -21,6 +22,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         let windowWidth = window.innerWidth;
         if (windowWidth > 768) {
             navLinks.classList.remove('close')
+            navBtn.classList.remove('close')
         } else {
             navLinks.classList.add('close')
         }

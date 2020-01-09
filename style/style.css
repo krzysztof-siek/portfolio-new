@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -446,14 +447,38 @@ textarea {
 }
 
 @font-face {
-  font-family: 'Gotham';
-  src: url("../fonts/Gotham-Font/Gotham-Light.otf") format("woff2");
   font-family: 'GothamBook';
   src: url("../fonts/Gotham-Book-Font/Gotham Book Font.otf") format("woff2");
 }
 
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/Gotham-Font/GothamMedium.ttf") format("woff2");
+}
+
 html {
   font-family: 'GothamBook', sans-serif;
+}
+
+.btn {
+  padding: 20px 30px;
+  background-color: #fdc66a;
+  color: #0c0c0c;
+  border: 1px solid #fdc66a;
+  font-family: "Gotham";
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.38px;
+  border-radius: 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.btn:hover {
+  background-color: #0c0c0c;
+  color: #fdc66a;
 }
 
 .limit-container {
@@ -463,7 +488,7 @@ html {
 }
 
 nav {
-  background-color: black;
+  background-color: #0c0c0c;
 }
 
 nav .navbar {
@@ -480,9 +505,12 @@ nav .navbar {
   padding: 10px;
 }
 
+nav .navbar .nav-brand {
+  z-index: 100;
+}
+
 nav .navbar .nav-links {
   position: absolute;
-  background-color: black;
   top: 100%;
   left: 0;
   width: 100%;
@@ -520,6 +548,52 @@ nav .navbar .nav-links.close {
 
 nav .navbar .nav-links .nav-item {
   margin: 30px 15px;
+  position: relative;
+  z-index: 2;
+}
+
+nav .navbar .nav-links .nav-item::before {
+  position: absolute;
+  top: -180%;
+  left: -80%;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 5px;
+  z-index: -1;
+  color: #fdc66a;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (min-width: 768px) {
+  nav .navbar .nav-links .nav-item::before {
+    display: none;
+  }
+}
+
+nav .navbar .nav-links .nav-item:hover::before {
+  opacity: 0.1;
+}
+
+nav .navbar .nav-links .nav-item:nth-child(1)::before {
+  content: "HOME";
+}
+
+nav .navbar .nav-links .nav-item:nth-child(2)::before {
+  content: "OMNIE";
+}
+
+nav .navbar .nav-links .nav-item:nth-child(3)::before {
+  content: "UMIEJĘTNOŚCI";
+}
+
+nav .navbar .nav-links .nav-item:nth-child(4)::before {
+  content: "PROJEKTY";
+}
+
+nav .navbar .nav-links .nav-item:nth-child(5)::before {
+  content: "KONTAKT";
 }
 
 @media (min-width: 992px) {
@@ -538,24 +612,180 @@ nav .navbar .nav-links .nav-item .nav-link.active {
   color: #fdc66a;
 }
 
+nav .navbar .nav-links .nav-item .nav-link.active:hover {
+  color: #fcb338;
+}
+
 nav .navbar .nav-links .nav-item .nav-link:hover {
   color: #feedcf;
 }
 
 nav .navbar .nav-button {
   z-index: 1000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 nav .navbar .nav-button .btn-line {
-  height: 3px;
-  width: 28px;
+  height: 2px;
+  width: 26px;
   background-color: white;
-  margin: 5px;
+  margin: 3px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+nav .navbar .nav-button .btn-line:nth-child(1) {
+  width: 12px;
+}
+
+nav .navbar .nav-button .btn-line:nth-child(2) {
+  width: 20px;
+}
+
+nav .navbar .nav-button .btn-line:nth-child(3) {
+  width: 26px;
+}
+
+nav .navbar .nav-button.close .btn-line:nth-child(1) {
+  width: 26px;
+}
+
+nav .navbar .nav-button.close .btn-line:nth-child(2) {
+  width: 20px;
+}
+
+nav .navbar .nav-button.close .btn-line:nth-child(3) {
+  width: 12px;
 }
 
 @media (min-width: 768px) {
   nav .navbar .nav-button {
     display: none;
+  }
+}
+
+header {
+  background-color: #0c0c0c;
+  height: 100vh;
+}
+
+header .heading {
+  margin-top: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  header .heading {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+header .heading .heading-main {
+  border: 1px solid white;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 20px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  header .heading .heading-main {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+header .heading .heading-main .main-welcome {
+  font-size: 24px;
+  line-height: 55px;
+  font-weight: 400;
+}
+
+header .heading .heading-main .main-name {
+  font-family: "Gotham";
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 55px;
+}
+
+header .heading .heading-main .main-name span {
+  color: #fdc66a;
+}
+
+header .heading .heading-main .main-prof {
+  font-family: "Gotham";
+  font-weight: 500;
+  line-height: 55px;
+  font-size: 30px;
+  margin-bottom: 50px;
+}
+
+header .heading .heading-main .socials {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .heading .heading-main .socials a {
+  margin: 20px;
+  position: relative;
+  z-index: 1;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+header .heading .heading-main .socials a i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+header .heading .img {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  header .heading .img {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
   }
 }
 /*# sourceMappingURL=style.css.map */

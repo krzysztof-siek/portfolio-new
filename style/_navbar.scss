@@ -1,5 +1,5 @@
 nav {
-    background-color: black;
+    background-color: $bgc;
 
     .navbar {
         position: relative;
@@ -8,9 +8,12 @@ nav {
         align-items: center;
         padding: 10px;
 
+        .nav-brand {
+            z-index: 100;
+        }
+
         .nav-links {
             position: absolute;
-            background-color: black;
             top: 100%;
             left: 0;
             width: 100%;
@@ -33,6 +36,63 @@ nav {
 
             .nav-item {
                 margin: 30px 15px;
+                position: relative;
+                z-index: 2;
+
+                &::before {
+                    position: absolute;
+                    top: -180%;
+                    left: -80%;
+                    font-size: 2em;
+                    font-weight: bold;
+                    letter-spacing: 5px;
+                    z-index: -1;
+                    color: $yellow;
+                    opacity: 0;
+                    transition: .3s;
+
+                    @media(min-width: 768px) {
+                        display: none;
+                    }
+                }
+
+                &:hover {
+                    &::before {
+                        opacity: 0.1;
+                    }
+                }
+
+
+
+                &:nth-child(1) {
+                    &::before {
+                        content: "HOME";
+                    }
+                }
+
+                &:nth-child(2) {
+                    &::before {
+                        content: "OMNIE";
+                    }
+                }
+
+                &:nth-child(3) {
+                    &::before {
+                        content: "UMIEJĘTNOŚCI";
+                    }
+                }
+
+                &:nth-child(4) {
+                    &::before {
+                        content: "PROJEKTY";
+                    }
+                }
+
+                &:nth-child(5) {
+                    &::before {
+                        content: "KONTAKT";
+                    }
+                }
 
                 @media(min-width: 992px) {
                     margin: 30px 25px;
@@ -44,8 +104,14 @@ nav {
                     color: $white;
                     text-transform: uppercase;
 
+
                     &.active {
                         color: $yellow;
+
+                        &:hover {
+                            color: $yellowHover2;
+                        }
+
                     }
 
                     &:hover {
@@ -59,13 +125,44 @@ nav {
 
         .nav-button {
             z-index: 1000;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
             .btn-line {
-                height: 3px;
-                width: 28px;
+                height: 2px;
+                width: 26px;
                 background-color: white;
-                margin: 5px;
+                margin: 3px;
+                transition: .3s;
+
+                &:nth-child(1) {
+                    width: 12px;
+                }
+
+                &:nth-child(2) {
+                    width: 20px;
+                }
+
+                &:nth-child(3) {
+                    width: 26px;
+                }
             }
+
+            &.close .btn-line {
+                &:nth-child(1) {
+                    width: 26px;
+                }
+
+                &:nth-child(2) {
+                    width: 20px;
+                }
+
+                &:nth-child(3) {
+                    width: 12px;
+                }
+            }
+
 
             @media(min-width: 768px) {
                 display: none;
