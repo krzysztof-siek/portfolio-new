@@ -1,6 +1,6 @@
 header {
     background-color: $bgc;
-    height: 100vh;
+    min-height: 100vh;
 
     .heading {
         margin-top: 100px;
@@ -12,14 +12,15 @@ header {
         }
 
         .heading-main {
-            border: 1px solid white;
             color: white;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            justify-content: space-between;
             padding: $base-p;
             order: 2;
             position: relative;
+
 
             @media(min-width:768px) {
                 order: 1;
@@ -52,25 +53,32 @@ header {
             }
 
             .socials {
-                position: absolute;
-                bottom: 20px;
-                left: 20px;
+                margin-top: 30px;
                 display: flex;
 
                 a {
                     margin: 20px;
+                    margin-left: 0;
                     position: relative;
                     z-index: 1;
-                    height: 50px;
-                    width: 50px;
-                    background-color: red;
+                    height: 40px;
+                    width: 40px;
+                    background-color: $grey2;
                     border-radius: 50%;
+                    transition: .3s;
+
+                    &:hover {
+                        background-color: $yellow;
+
+                    }
 
                     i {
+                        color: $bgc;
                         position: absolute;
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
+                        font-size: 20px;
                     }
 
                 }
@@ -81,6 +89,20 @@ header {
         .img {
             order: 1;
             text-align: center;
+            position: relative;
+            z-index: 2;
+
+            &::after {
+                position: absolute;
+                content: "";
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border: 5px solid $yellow;
+                transform: translate(10%, 0%) rotate(-10deg) scale(0.55);
+                z-index: -1;
+            }
 
             @media(min-width:768px) {
                 order: 2;

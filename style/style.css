@@ -527,6 +527,8 @@ nav .navbar .nav-links {
   padding: 50px 0;
   -webkit-transition: .3s;
   transition: .3s;
+  z-index: 100;
+  background-color: rgba(12, 12, 12, 0.7);
 }
 
 @media (min-width: 768px) {
@@ -675,7 +677,7 @@ nav .navbar .nav-button.close .btn-line:nth-child(3) {
 
 header {
   background-color: #0c0c0c;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 header .heading {
@@ -694,7 +696,6 @@ header .heading {
 }
 
 header .heading .heading-main {
-  border: 1px solid white;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -706,6 +707,9 @@ header .heading .heading-main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 20px;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -748,9 +752,7 @@ header .heading .heading-main .main-prof {
 }
 
 header .heading .heading-main .socials {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -758,20 +760,29 @@ header .heading .heading-main .socials {
 
 header .heading .heading-main .socials a {
   margin: 20px;
+  margin-left: 0;
   position: relative;
   z-index: 1;
-  height: 50px;
-  width: 50px;
-  background-color: red;
+  height: 40px;
+  width: 40px;
+  background-color: #333333;
   border-radius: 50%;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header .heading .heading-main .socials a:hover {
+  background-color: #fdc66a;
 }
 
 header .heading .heading-main .socials a i {
+  color: #0c0c0c;
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  font-size: 20px;
 }
 
 header .heading .img {
@@ -779,6 +790,21 @@ header .heading .img {
       -ms-flex-order: 1;
           order: 1;
   text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+header .heading .img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border: 5px solid #fdc66a;
+  -webkit-transform: translate(10%, 0%) rotate(-10deg) scale(0.55);
+          transform: translate(10%, 0%) rotate(-10deg) scale(0.55);
+  z-index: -1;
 }
 
 @media (min-width: 768px) {
