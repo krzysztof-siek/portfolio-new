@@ -1,14 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans&display=swap&subset=latin-ext");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css");
 
-
-
-
-html {
-    font-family: 'Montserrat', sans-serif;
+@font-face {
+    font-family: 'Gotham';
+    src: url('../fonts/Gotham-Font/Gotham-Light.otf') format('woff2');
+    font-family: 'GothamBook';
+    src: url('../fonts/Gotham-Book-Font/Gotham\ Book\ Font.otf') format('woff2'),
 }
 
 
+html {
+    font-family: 'GothamBook', sans-serif;
+}
 
-// font-family: 'Open Sans', sans-serif;
-// font-family: 'Montserrat', sans-serif;
+
+.limit-container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
