@@ -70,7 +70,8 @@ header {
                     z-index: 1;
                     height: 40px;
                     width: 40px;
-                    background-color: $grey2;
+                    // background-color: $bgc2;
+                    border: 1px solid $grey2;
                     border-radius: 50%;
                     transition: .3s;
 
@@ -80,7 +81,7 @@ header {
                     }
 
                     i {
-                        color: $bgc;
+                        color: $grey2;
                         position: absolute;
                         top: 50%;
                         left: 50%;

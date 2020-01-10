@@ -41,8 +41,8 @@
 }
 
 .jumbotron {
-    padding: $base-p2;
     background-color: rgba(253, 198, 106, 1);
+    padding-bottom: 100px;
 
 
     .container {
@@ -62,10 +62,27 @@
 
 .row {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 
     .row-title {
         font-size: 36px;
         font-family: "Gotham", sans-serif;
+        color: $yellow;
+        line-height: 55px;
+        font-weight: 700;
     }
+
+    .row-subtitle {
+        color: $white;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+}
+
+.section-container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0;
 }
