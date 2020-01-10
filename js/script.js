@@ -38,7 +38,17 @@ window.addEventListener('load', (event) => {
     }
     navLink.forEach(el => el.addEventListener('click', closeNavLinks))
 
+    showBackToUpButton = () => {
+        const pageUp = document.querySelector('.page-up')
+        let scrollY = window.scrollY;
+        if (scrollY >= 200) {
+            pageUp.classList.add('show')
+        } else {
+            pageUp.classList.remove('show')
 
+        }
+    }
 
+    window.addEventListener('scroll', showBackToUpButton)
 
 });
