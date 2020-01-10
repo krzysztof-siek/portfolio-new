@@ -458,6 +458,7 @@ textarea {
 
 html {
   font-family: 'GothamBook', sans-serif;
+  scroll-behavior: smooth;
 }
 
 .btn {
@@ -618,8 +619,8 @@ nav .navbar .nav-brand {
 }
 
 nav .navbar .nav-links {
-  position: absolute;
-  top: 100%;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   display: -webkit-box;
@@ -637,29 +638,45 @@ nav .navbar .nav-links {
   transition: .3s;
   z-index: 100;
   background-color: rgba(12, 12, 12, 0.7);
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
 }
 
 @media (min-width: 768px) {
   nav .navbar .nav-links {
     position: static;
+    top: 0;
     width: initial;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     padding: 0;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
-nav .navbar .nav-links.close {
-  -webkit-transform: translateY(-120%);
-          transform: translateY(-120%);
+nav .navbar .nav-links.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+@media (min-width: 768px) {
+  nav .navbar .nav-links.open {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }
 
 nav .navbar .nav-links .nav-item {
   margin: 30px 15px;
   position: relative;
   z-index: 2;
+}
+
+nav .navbar .nav-links .nav-item.active a {
+  color: #fdc66a;
 }
 
 nav .navbar .nav-links .nav-item::before {
@@ -742,6 +759,11 @@ nav .navbar .nav-button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  -webkit-transition: .3s;
+  transition: .3s;
+  position: fixed;
+  top: 20px;
+  right: 10px;
 }
 
 nav .navbar .nav-button .btn-line {
@@ -765,15 +787,15 @@ nav .navbar .nav-button .btn-line:nth-child(3) {
   width: 26px;
 }
 
-nav .navbar .nav-button.close .btn-line:nth-child(1) {
+nav .navbar .nav-button.open .btn-line:nth-child(1) {
   width: 26px;
 }
 
-nav .navbar .nav-button.close .btn-line:nth-child(2) {
+nav .navbar .nav-button.open .btn-line:nth-child(2) {
   width: 20px;
 }
 
-nav .navbar .nav-button.close .btn-line:nth-child(3) {
+nav .navbar .nav-button.open .btn-line:nth-child(3) {
   width: 12px;
 }
 

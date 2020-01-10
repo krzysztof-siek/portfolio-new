@@ -1,6 +1,7 @@
 nav {
     background-color: $bgc;
 
+
     .navbar {
         position: relative;
         display: flex;
@@ -13,8 +14,8 @@ nav {
         }
 
         .nav-links {
-            position: absolute;
-            top: 100%;
+            position: fixed;
+            top: 0;
             left: 0;
             width: 100%;
             display: flex;
@@ -24,22 +25,33 @@ nav {
             transition: .3s;
             z-index: 100;
             background-color: rgba(12, 12, 12, .7);
+            transform: translateY(-120%);
 
             @media(min-width: 768px) {
                 position: static;
+                top: 0;
                 width: initial;
                 flex-direction: row;
                 padding: 0;
+                transform: translateY(0);
             }
 
-            &.close {
-                transform: translateY(-120%);
+            &.open {
+                transform: translateY(0);
+
+                @media(min-width: 768px) {
+                    transform: translateY(0);
+                }
             }
 
             .nav-item {
                 margin: 30px 15px;
                 position: relative;
                 z-index: 2;
+
+                &.active a {
+                    color: $yellow;
+                }
 
                 &::before {
                     position: absolute;
@@ -130,6 +142,12 @@ nav {
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            transition: .3s;
+            position: fixed;
+            top: 20px;
+            right: 10px;
+
+
 
             .btn-line {
                 height: 2px;
@@ -149,9 +167,13 @@ nav {
                 &:nth-child(3) {
                     width: 26px;
                 }
+
+
+
+
             }
 
-            &.close .btn-line {
+            &.open .btn-line {
                 &:nth-child(1) {
                     width: 26px;
                 }

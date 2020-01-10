@@ -1,13 +1,15 @@
 window.addEventListener('load', (event) => {
 
-    // loader = () => {
-
-    console.log('DOM fully loaded and parsed');
+    //  LOADER 
     const loader = document.querySelector(".loader-bg");
     loader.classList.add("hide")
-    // }
+    // End of loader
 
-    // setTimeout(loader, 1000);
+
+
+    // ScrollSpy
+    var spy = new Gumshoe('#nav-links a');
+    // end of scrollSpy
 
 
 
@@ -16,34 +18,27 @@ window.addEventListener('load', (event) => {
     const navLinks = document.querySelector(".nav-links");
 
     toggleNavLinks = () => {
-        navLinks.classList.toggle('close')
-        navBtn.classList.toggle('close')
+        navLinks.classList.toggle('open')
+        navBtn.classList.toggle('open')
     }
 
     navBtn.addEventListener('click', toggleNavLinks)
     // END OF toggle nav-links when press nav-button
 
 
+    // click navLink close NavLinks and navBtn only on mobile
+    const navLink = document.querySelectorAll('.nav-link')
 
-    //  listener for resizeing window to remove close class from nav-link
-    normalizeNavLink = () => {
+    closeNavLinks = () => {
         let windowWidth = window.innerWidth;
-        if (windowWidth > 768) {
-            navLinks.classList.remove('close')
-            navBtn.classList.remove('close')
-        } else {
-            navLinks.classList.add('close')
+        if (windowWidth < 768) {
+            navLinks.classList.remove('open')
+            navBtn.classList.remove('open')
         }
     }
-
-    window.addEventListener('resize', normalizeNavLink)
-    //   END OF listener for resizeing window to remove close class from nav-link
-
-
+    navLink.forEach(el => el.addEventListener('click', closeNavLinks))
 
 
 
 
 });
-
-// ZROBIĆ : DOSTOSOWAĆ HEADER DO MOBILE. OGARNĄĆ PRELOADER i /lub lazy components
