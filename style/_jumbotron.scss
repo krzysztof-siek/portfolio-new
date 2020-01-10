@@ -1,0 +1,34 @@
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+    border-radius: 50%;
+    position: relative;
+    transition: .3s;
+
+    img {
+        border: 1px solid $yellow;
+        border-radius: 50%;
+        padding: 20px;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+
+        img {
+            border: 1px solid $bgc;
+        }
+
+    }
+
+    .interests {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        font-size: 24px;
+        text-transform: capitalize;
+    }
+}

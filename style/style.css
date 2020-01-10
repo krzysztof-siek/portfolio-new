@@ -505,6 +505,42 @@ html {
   color: #fff;
 }
 
+.jumbotron {
+  padding: 50px;
+  background-color: #fdc66a;
+}
+
+.jumbotron .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 768px) {
+  .jumbotron .container {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.row {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.row .row-title {
+  font-size: 36px;
+  font-family: "Gotham", sans-serif;
+}
+
 header {
   position: relative;
 }
@@ -828,7 +864,7 @@ header {
 }
 
 header .heading {
-  margin: 100px 0;
+  margin: 50px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -935,6 +971,7 @@ header .heading .heading-main .socials a i {
 }
 
 header .heading .img {
+  display: none;
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
@@ -943,6 +980,12 @@ header .heading .img {
   z-index: 2;
   max-width: 100%;
   border-bottom: 2px solid #fdc66a;
+}
+
+@media (min-width: 768px) {
+  header .heading .img {
+    display: block;
+  }
 }
 
 header .heading .img::after {
@@ -989,6 +1032,48 @@ header .page-up.show {
           transform: translateX(10%);
 }
 
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  border-radius: 50%;
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.icon img {
+  border: 1px solid #fdc66a;
+  border-radius: 50%;
+  padding: 20px;
+}
+
+.icon:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.icon:hover img {
+  border: 1px solid #0c0c0c;
+}
+
+.icon .interests {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
 .about {
   background-color: #111111;
 }
@@ -1010,6 +1095,9 @@ header .page-up.show {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

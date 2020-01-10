@@ -6,7 +6,7 @@ header {
 
 
     .heading {
-        margin: 100px 0;
+        margin: 50px 0;
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
@@ -94,13 +94,18 @@ header {
         }
 
         .img {
+            display: none;
             order: 1;
             text-align: center;
             position: relative;
             z-index: 2;
             max-width: 100%;
-
             border-bottom: 2px solid $yellow;
+
+            @media(min-width: 768px) {
+                display: block;
+            }
+
 
 
 
