@@ -501,7 +501,7 @@ html {
 }
 
 .btn:hover {
-  background-color: #0c0c0c;
+  background-color: transparent;
   color: #fff;
 }
 
