@@ -1,5 +1,7 @@
 window.addEventListener('load', (event) => {
     console.log('DOM fully loaded and parsed');
+    const loader = document.querySelector(".loader-bg");
+    loader.classList.add("hide")
 
 
 
@@ -35,4 +37,7 @@ window.addEventListener('load', (event) => {
 
 
 
+
 });
+
+// ZROBIĆ : DOSTOSOWAĆ HEADER DO MOBILE. OGARNĄĆ PRELOADER i /lub lazy components
