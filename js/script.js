@@ -1,7 +1,13 @@
 window.addEventListener('load', (event) => {
+
+    // loader = () => {
+
     console.log('DOM fully loaded and parsed');
     const loader = document.querySelector(".loader-bg");
     loader.classList.add("hide")
+    // }
+
+    // setTimeout(loader, 1000);
 
 
 
