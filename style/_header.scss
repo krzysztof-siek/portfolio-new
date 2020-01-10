@@ -1,16 +1,21 @@
 header {
     background-color: $bgc;
-    min-height: 100vh;
+    // min-height: 100vh;
     overflow: hidden;
 
+
+
     .heading {
-        margin-top: 100px;
+        margin: 100px 0;
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
 
+
+
         @media(min-width: 768px) {
             grid-template-columns: repeat(2, 1fr);
+            margin: 140px 0;
         }
 
         .heading-main {
@@ -95,7 +100,7 @@ header {
             z-index: 2;
             max-width: 100%;
 
-            border-bottom: 5px solid $yellow;
+            border-bottom: 2px solid $yellow;
 
 
 
@@ -125,7 +130,7 @@ header {
         right: 0px;
         color: $yellow;
         background-color: $bgc;
-        width: 50px;
+        width: 30px;
         padding: 10px;
         border-top-left-radius: 50%;
         border-bottom-left-radius: 5px;
