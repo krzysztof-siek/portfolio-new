@@ -1,3 +1,36 @@
+.jumbotron-container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0;
+    padding-bottom: 0px;
+
+    .jumbotron-row {
+        text-align: center;
+        margin-bottom: 0px;
+
+        .row-title {
+            font-size: 32px;
+            font-family: "Gotham", sans-serif;
+            color: $yellow;
+            line-height: 36px;
+            font-weight: 700;
+            color: $bgc;
+
+
+
+        }
+
+        .row-subtitle {
+            color: $white;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 400;
+        }
+    }
+}
+
+
 .icon {
     display: flex;
     align-items: center;
@@ -30,4 +63,6 @@
         font-size: 24px;
         text-transform: capitalize;
     }
+
+
 }

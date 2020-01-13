@@ -47,7 +47,6 @@
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-gap: 50px;
         justify-content: center;
         align-items: center;
 
@@ -69,6 +68,12 @@
         color: $yellow;
         line-height: 55px;
         font-weight: 700;
+
+        &.light {
+            color: $bgc;
+        }
+
+
     }
 
     .row-subtitle {

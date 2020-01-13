@@ -1,8 +1,7 @@
 header {
     background-color: $bgc;
-    // min-height: 100vh;
+    min-height: 90vh;
     overflow: hidden;
-
 
 
     .heading {
@@ -10,7 +9,6 @@ header {
         display: grid;
         grid-template-columns: 1fr;
         overflow: hidden;
-
 
 
         @media(min-width: 768px) {
@@ -25,9 +23,9 @@ header {
             align-items: flex-start;
             justify-content: space-between;
             padding: $base-p;
+            padding-bottom: 0;
             order: 2;
             position: relative;
-
 
             @media(min-width:768px) {
                 order: 1;
@@ -44,7 +42,7 @@ header {
                 color: $white;
                 font-size: $base-s *2;
                 font-weight: 700;
-                line-height: 55px;
+                line-height: 45px;
 
                 span {
                     color: $yellow;
@@ -54,9 +52,13 @@ header {
             .main-prof {
                 font-family: "Gotham";
                 font-weight: 500;
-                line-height: 55px;
+                line-height: 30px;
                 font-size: 30px;
                 margin-bottom: 50px;
+
+                @media(min-width: 768px) {
+                    line-height: 55px;
+                }
             }
 
             .socials {

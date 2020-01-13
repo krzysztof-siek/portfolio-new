@@ -515,7 +515,6 @@ html {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  grid-gap: 50px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -542,6 +541,10 @@ html {
   color: #fdc66a;
   line-height: 55px;
   font-weight: 700;
+}
+
+.row .row-title.light {
+  color: #0c0c0c;
 }
 
 .row .row-subtitle {
@@ -877,6 +880,7 @@ nav .navbar .nav-button.open .btn-line:nth-child(3) {
 
 header {
   background-color: #0c0c0c;
+  min-height: 90vh;
   overflow: hidden;
 }
 
@@ -913,6 +917,7 @@ header .heading .heading-main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
+  padding-bottom: 0;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -938,7 +943,7 @@ header .heading .heading-main .main-name {
   color: #fff;
   font-size: 48px;
   font-weight: 700;
-  line-height: 55px;
+  line-height: 45px;
 }
 
 header .heading .heading-main .main-name span {
@@ -948,9 +953,15 @@ header .heading .heading-main .main-name span {
 header .heading .heading-main .main-prof {
   font-family: "Gotham";
   font-weight: 500;
-  line-height: 55px;
+  line-height: 30px;
   font-size: 30px;
   margin-bottom: 50px;
+}
+
+@media (min-width: 768px) {
+  header .heading .heading-main .main-prof {
+    line-height: 55px;
+  }
 }
 
 header .heading .heading-main .socials {
@@ -1047,6 +1058,35 @@ header .page-up {
 header .page-up.show {
   -webkit-transform: translateX(10%);
           transform: translateX(10%);
+}
+
+.jumbotron-container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 50px 0;
+  padding-bottom: 0px;
+}
+
+.jumbotron-container .jumbotron-row {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.jumbotron-container .jumbotron-row .row-title {
+  font-size: 32px;
+  font-family: "Gotham", sans-serif;
+  color: #fdc66a;
+  line-height: 36px;
+  font-weight: 700;
+  color: #0c0c0c;
+}
+
+.jumbotron-container .jumbotron-row .row-subtitle {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
 }
 
 .icon {
