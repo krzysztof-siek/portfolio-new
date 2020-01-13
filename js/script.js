@@ -51,4 +51,76 @@ window.addEventListener('load', (event) => {
 
     window.addEventListener('scroll', showBackToUpButton)
 
+    // skills change content when mouse on
+    const skillsIcons = document.querySelectorAll('.skills-single-icon')
+
+    // skillsChangeContent = (e) => {
+    //     let a = e.target.getAttribute('data-icon')
+    //     console.log(a);
+    // }
+
+
+
+
+    skillsIcons.forEach(el => el.addEventListener('mouseover', function () {
+        let data = this.getAttribute('data-icon')
+        const technology = document.querySelector('.technology')
+        const description = document.querySelector(".description")
+        const content = document.querySelector('.content')
+        const procent = document.querySelector(".procent")
+        if (data == "html") {
+            technology.textContent = "HTML"
+            description.textContent = "Wykorzystuję znaczniki zgodnie z semantyką i standardami W3C."
+            content.style = "width: 80%"
+            procent.textContent = "80%"
+
+        } else if (data == "css") {
+            technology.textContent = "CSS"
+            description.textContent = "KORZYSTAM Z NOTACJI BEM ORAZ ZALEŻNIE OD POTRZEB PROJEKTU - ACSS."
+            content.style = "width: 80%"
+            procent.textContent = "80%"
+
+        } else if (data == "js") {
+            technology.textContent = "JS"
+            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            content.style = "width: 70%"
+            procent.textContent = "70%"
+
+        } else if (data == "react") {
+            technology.textContent = "react"
+            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            content.style = "width: 60%"
+            procent.textContent = "60%"
+
+        } else if (data == "bootstrap") {
+            technology.textContent = "Bootstrap"
+            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            content.style = "width: 80%"
+            procent.textContent = "80%"
+
+        } else if (data == "sass") {
+            technology.textContent = "Sass"
+            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            content.style = "width: 70%"
+            procent.textContent = "70%"
+
+        } else if (data == "git") {
+            technology.textContent = "Git i  Github"
+            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            content.style = "width: 70%"
+            procent.textContent = "70%"
+
+        } else if (data == "rwd") {
+            technology.textContent = "Responsive Web Design"
+            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            content.style = "width: 80%"
+            procent.textContent = "80%"
+
+        }
+
+
+
+    }))
+
+
 });

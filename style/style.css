@@ -1225,15 +1225,263 @@ header .page-up.show {
   background-color: #0c0c0c;
 }
 
+.skills .row-title {
+  position: relative;
+  z-index: 2;
+}
+
+.skills .row-title:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+  font-family: "Gotham", sans-serif;
+  font-size: 38px;
+  font-weight: bolder;
+  color: #181818;
+  content: "Umiejętności";
+  text-transform: uppercase;
+  z-index: -10;
+}
+
+@media (min-width: 768px) {
+  .skills .row-title:after {
+    font-size: 72px;
+  }
+}
+
+@media (min-width: 992px) {
+  .skills .row-title:after {
+    letter-spacing: 7px;
+    font-size: 82px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .skills .row-title:after {
+    font-size: 98px;
+    letter-spacing: 10px;
+  }
+}
+
+.skills .icons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 20px;
+  margin: 0 auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.skills .icons-container .skills-single-icon {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
+
+.skills .icons-container .skills-single-icon:nth-child(7) {
+  background-color: white;
+}
+
+.skills .icons-container .skills-single-icon:nth-child(8) {
+  background-color: white;
+}
+
+.skills .icons-container .skills-single-icon img {
+  width: 100%;
+}
+
+.skills .progress-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 20px;
+}
+
+.skills .progress-container .technology,
+.skills .progress-container .description {
+  color: #fff;
+}
+
+.skills .progress-container .technology {
+  margin-bottom: 30px;
+  font-size: 24px;
+  line-height: 55px;
+}
+
+.skills .progress-container .description {
+  margin-bottom: 100px;
+}
+
+.skills .progress-container .progress-bar {
+  height: 8px;
+  border: 1px solid #111111;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.skills .progress-container .progress-bar .content {
+  width: 80%;
+  height: 100%;
+  background-color: #fdc66a;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.skills .progress-container .progress-bar .content .procent {
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  color: #fff;
+}
+
 .features {
   background-color: #0c0c0c;
+}
+
+.features .row-title {
+  position: relative;
+  z-index: 2;
+}
+
+.features .row-title:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+  font-family: "Gotham", sans-serif;
+  font-size: 38px;
+  font-weight: bolder;
+  color: #181818;
+  content: "Cechy";
+  text-transform: uppercase;
+  z-index: -10;
+}
+
+@media (min-width: 768px) {
+  .features .row-title:after {
+    font-size: 72px;
+  }
+}
+
+@media (min-width: 992px) {
+  .features .row-title:after {
+    letter-spacing: 7px;
+    font-size: 82px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features .row-title:after {
+    font-size: 98px;
+    letter-spacing: 10px;
+  }
 }
 
 .projects {
   background-color: #111111;
 }
 
+.projects .row-title {
+  position: relative;
+  z-index: 2;
+}
+
+.projects .row-title:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+  font-family: "Gotham", sans-serif;
+  font-size: 38px;
+  font-weight: bolder;
+  color: #181818;
+  content: "Projekty";
+  text-transform: uppercase;
+  z-index: -10;
+}
+
+@media (min-width: 768px) {
+  .projects .row-title:after {
+    font-size: 72px;
+  }
+}
+
+@media (min-width: 992px) {
+  .projects .row-title:after {
+    letter-spacing: 7px;
+    font-size: 82px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects .row-title:after {
+    font-size: 98px;
+    letter-spacing: 10px;
+  }
+}
+
 .contact {
   background-color: #111111;
+}
+
+.contact .row-title {
+  position: relative;
+  z-index: 2;
+}
+
+.contact .row-title:after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -90%);
+          transform: translate(-50%, -90%);
+  font-family: "Gotham", sans-serif;
+  font-size: 38px;
+  font-weight: bolder;
+  color: #181818;
+  content: "Kontakt";
+  text-transform: uppercase;
+  z-index: -10;
+}
+
+@media (min-width: 768px) {
+  .contact .row-title:after {
+    font-size: 72px;
+  }
+}
+
+@media (min-width: 992px) {
+  .contact .row-title:after {
+    letter-spacing: 7px;
+    font-size: 82px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact .row-title:after {
+    font-size: 98px;
+    letter-spacing: 10px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

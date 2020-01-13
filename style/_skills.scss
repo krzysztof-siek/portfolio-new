@@ -1,3 +1,113 @@
 .skills {
     background-color: $bgc;
+
+    .row-title {
+        position: relative;
+        z-index: 2;
+
+        &:after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -90%);
+            font-family: "Gotham", sans-serif;
+            font-size: 38px;
+            font-weight: bolder;
+            color: $titleAfter;
+            content: "Umiejętności";
+            text-transform: uppercase;
+            z-index: -10;
+
+            @media(min-width: 768px) {
+                font-size: 72px;
+            }
+
+            @media(min-width: 992px) {
+                letter-spacing: 7px;
+                font-size: 82px;
+            }
+
+            @media(min-width: 1200px) {
+                font-size: 98px;
+                letter-spacing: 10px;
+            }
+        }
+    }
+
+    .icons-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: $base-p;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+
+
+        .skills-single-icon {
+            // margin: 10px;
+            border-radius: 50%;
+            overflow: hidden;
+            height: 100px;
+            width: 100px;
+            margin: 20px;
+
+            &:nth-child(7) {
+                background-color: white;
+            }
+
+            &:nth-child(8) {
+                background-color: white;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .progress-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: $base-p;
+
+        .technology,
+        .description {
+            color: $white;
+        }
+
+        .technology {
+            margin-bottom: 30px;
+            font-size: 24px;
+            line-height: 55px;
+        }
+
+        .description {
+            margin-bottom: 100px;
+        }
+
+
+
+        .progress-bar {
+            height: 8px;
+            border: 1px solid $bgc2;
+            background-color: $white;
+            border-radius: 5px;
+
+            .content {
+                width: 80%;
+                height: 100%;
+                background-color: $yellow;
+                position: relative;
+                transition: 1s;
+
+                .procent {
+                    position: absolute;
+                    top: -30px;
+                    right: -30px;
+                    color: $white;
+                }
+            }
+        }
+    }
 }
