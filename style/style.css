@@ -505,6 +505,10 @@ html {
   color: #fff;
 }
 
+.btn.btn-small {
+  padding: 10px 15px;
+}
+
 .jumbotron {
   background-color: #fdc66a;
   padding-bottom: 100px;
@@ -1524,12 +1528,29 @@ header .page-up.show {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-details {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .contact .contact-details .photo {
@@ -1537,11 +1558,48 @@ header .page-up.show {
   width: 150px;
   border-radius: 50%;
   overflow: hidden;
+  border: 1px solid #fdc66a;
+  margin-bottom: 50px;
 }
 
-.contact .contact-details .photo img {
+@media (min-width: 768px) {
+  .contact .contact-details .photo {
+    margin-bottom: 0;
+  }
+}
+
+.contact .contact-details .photo .img1 {
   width: 100%;
   height: auto;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-details .photo .img1 {
+    display: inline-block;
+  }
+}
+
+.contact .contact-details .photo .img2 {
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-details .photo .img2 {
+    display: none;
+  }
+}
+
+.contact .contact-details .contact-icon {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-details .contact-icon {
+    margin-bottom: 0px;
+  }
 }
 
 .contact .contact-details .contact-icon i {
@@ -1551,14 +1609,67 @@ header .page-up.show {
 .contact .contact-details .contact-icon .contact-info {
   font-size: 18px;
   color: #fff;
-  line-height: 55px;
   text-transform: uppercase;
   font-family: "Gotham", sans-serif;
+  line-height: 30px;
+}
+
+@media (min-width: 768px) {
+  .contact .contact-details .contact-icon .contact-info {
+    line-height: 55px;
+  }
 }
 
 .contact .contact-details .contact-icon .contact-info-small {
   color: #fff;
   opacity: 0.5;
   font-size: 14px;
+}
+
+.contact .grid .map {
+  background-color: pink;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+.contact .grid .map iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact .grid .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 400px;
+  padding: 20px;
+  padding-bottom: 50px;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+@media (min-width: 768px) {
+  .contact .grid .contact-form {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 0 50px;
+    padding-bottom: 0;
+  }
+}
+
+.contact .grid .contact-form input,
+.contact .grid .contact-form textarea {
+  padding: 10px;
+  border: 1px solid #fff;
 }
 /*# sourceMappingURL=style.css.map */
