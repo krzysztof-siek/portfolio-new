@@ -1355,6 +1355,7 @@ header .page-up.show {
 
 .features {
   background-color: #0c0c0c;
+  padding-bottom: 100px;
 }
 
 .features .row-title {
@@ -1395,6 +1396,40 @@ header .page-up.show {
     font-size: 98px;
     letter-spacing: 10px;
   }
+}
+
+.features .features-icon-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.features .features-icon-container .features-icon {
+  text-align: center;
+  padding: 20px;
+}
+
+.features .features-icon-container .features-icon:hover {
+  -webkit-box-shadow: 5px 5px 8px 0px rgba(255, 255, 255, 0.75);
+          box-shadow: 5px 5px 8px 0px rgba(255, 255, 255, 0.75);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.features .features-icon-container .features-icon .features-name {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fdc66a;
+  line-height: 55px;
 }
 
 .projects {
@@ -1483,5 +1518,47 @@ header .page-up.show {
     font-size: 98px;
     letter-spacing: 10px;
   }
+}
+
+.contact .contact-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.contact .contact-details .photo {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.contact .contact-details .photo img {
+  width: 100%;
+  height: auto;
+}
+
+.contact .contact-details .contact-icon i {
+  padding-right: 20px;
+}
+
+.contact .contact-details .contact-icon .contact-info {
+  font-size: 18px;
+  color: #fff;
+  line-height: 55px;
+  text-transform: uppercase;
+  font-family: "Gotham", sans-serif;
+}
+
+.contact .contact-details .contact-icon .contact-info-small {
+  color: #fff;
+  opacity: 0.5;
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */

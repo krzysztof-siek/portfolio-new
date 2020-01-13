@@ -1,5 +1,6 @@
 .features {
     background-color: $bgc;
+    padding-bottom: 100px;
 
     .row-title {
         position: relative;
@@ -30,6 +31,32 @@
             @media(min-width: 1200px) {
                 font-size: 98px;
                 letter-spacing: 10px;
+            }
+        }
+    }
+
+
+    .features-icon-container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        .features-icon {
+            text-align: center;
+            // background-color: $titleAfter;
+            padding: $base-p;
+
+            &:hover {
+                box-shadow: 5px 5px 8px 0px rgba(255, 255, 255, 0.75);
+                transform: translateY(-2px);
+            }
+
+            .features-name {
+                font-size: 24px;
+                margin-bottom: 10px;
+                color: $yellow;
+                line-height: 55px;
             }
         }
     }

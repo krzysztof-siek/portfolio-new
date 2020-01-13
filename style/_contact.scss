@@ -33,4 +33,43 @@
             }
         }
     }
+
+    .contact-details {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .photo {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .contact-icon {
+            i {
+                padding-right: 20px;
+            }
+
+            .contact-info {
+                font-size: 18px;
+                color: $white;
+                line-height: 55px;
+                text-transform: uppercase;
+                font-family: "Gotham", sans-serif;
+            }
+
+            .contact-info-small {
+                color: $white;
+                opacity: 0.5;
+                font-size: 14px;
+            }
+        }
+    }
 }
