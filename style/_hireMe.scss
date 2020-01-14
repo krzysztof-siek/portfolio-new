@@ -1,0 +1,34 @@
+.hireMe {
+    background-color: $yellow;
+    // background-color: $bgc;
+    padding: 50px 20px;
+
+    .hireMe-container {
+        display: flex;
+        max-width: 1170px;
+        margin: 0 auto;
+        justify-content: space-between;
+
+        .hire-img {
+            border-bottom: 2px solid $bgc;
+        }
+
+        .hire-info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .hire-title {
+                font-size: 32px;
+                font-weight: bold;
+                line-height: 55px;
+            }
+
+            .hire-subtitle {
+                line-height: 30px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
