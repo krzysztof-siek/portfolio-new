@@ -41,6 +41,11 @@
         margin: 0 auto;
         justify-content: center;
         align-items: center;
+        width: 80%;
+
+        @media(min-width:768px) {
+            width: 100%;
+        }
 
 
         .skills-single-icon {
@@ -68,8 +73,9 @@
     .progress-container {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: center;
         padding: $base-p;
+        width: 80%;
 
         .technology,
         .description {

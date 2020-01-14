@@ -96,13 +96,13 @@ window.addEventListener('load', (event) => {
         const procent = document.querySelector(".procent")
         if (data == "html") {
             technology.textContent = "HTML"
-            description.textContent = "Wykorzystuję znaczniki zgodnie z semantyką i standardami W3C."
+            description.textContent = "Wykorzystuję znaczniki zgodnie z semantyką i standardami W3C. Dobrze napisany kod HTML jest punktem wyjściowym do sukcesu funkcjonowania web aplikacji w sieci. "
             content.style = "width: 80%"
             procent.textContent = "80%"
 
         } else if (data == "css") {
             technology.textContent = "CSS"
-            description.textContent = "KORZYSTAM Z NOTACJI BEM ORAZ ZALEŻNIE OD POTRZEB PROJEKTU - ACSS."
+            description.textContent = "Wykorzystuję Scss, aby kod który pisze był czytelniejszy"
             content.style = "width: 80%"
             procent.textContent = "80%"
 

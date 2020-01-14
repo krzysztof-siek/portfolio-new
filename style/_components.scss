@@ -13,8 +13,10 @@
     height: 100%;
     overflow: hidden;
 
+
     @media(min-width: 992px) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+
     }
 }
 
@@ -93,4 +95,17 @@
     max-width: 1170px;
     margin: 0 auto;
     padding: 50px 0;
+}
+
+.new-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+    @media(min-width:768px) {
+        flex-direction: row;
+    }
 }

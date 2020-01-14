@@ -11,6 +11,11 @@
 
         .hire-img {
             border-bottom: 2px solid $bgc;
+            display: none;
+
+            @media(min-width: 768px) {
+                display: block;
+            }
         }
 
         .hire-info {
@@ -28,6 +33,17 @@
             .hire-subtitle {
                 line-height: 30px;
                 margin-bottom: 50px;
+            }
+        }
+
+        .btn {
+            background-color: $bgc;
+            color: $white;
+            border: 1px solid $bgc;
+
+            &:hover {
+                background-color: $yellow;
+                border: 1px solid $bgc;
             }
         }
     }
