@@ -1438,6 +1438,7 @@ header .page-up.show {
 
 .projects {
   background-color: #111111;
+  padding-bottom: 100px;
 }
 
 .projects .row-title {
@@ -1478,6 +1479,44 @@ header .page-up.show {
     font-size: 98px;
     letter-spacing: 10px;
   }
+}
+
+.projects .swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.projects .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  background-color: #0c0c0c;
+  overflow: hidden;
+}
+
+.projects .swiper-slide .imgBox {
+  width: 100%;
+}
+
+.projects .swiper-slide .imgBox img {
+  width: 100%;
+}
+
+.projects .swiper-slide .details {
+  color: #fff;
+}
+
+.projects .swiper-pagination {
+  cursor: pointer;
+}
+
+.projects .swiper-pagination .swiper-pagination-bullet {
+  background-color: #fff;
+}
+
+.projects .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #fdc66a;
 }
 
 .contact {
@@ -1627,7 +1666,6 @@ header .page-up.show {
 }
 
 .contact .grid .map {
-  background-color: pink;
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
@@ -1636,6 +1674,7 @@ header .page-up.show {
 .contact .grid .map iframe {
   width: 100%;
   height: 100%;
+  min-height: 400px;
 }
 
 .contact .grid .contact-form {

@@ -1,5 +1,31 @@
 window.addEventListener('load', (event) => {
 
+    // Swipper 
+    var swiper = new Swiper('.swiper-container', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+
+    const pag = document.querySelectorAll('.swiper-pagination-bullet')
+    pag.forEach(el => el.style = "backgroundColor: red")
+
+
+
+    //   End of swipper
+
+
     //  LOADER 
     const loader = document.querySelector(".loader-bg");
     loader.classList.add("hide")

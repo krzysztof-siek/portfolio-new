@@ -1,5 +1,6 @@
 .projects {
     background-color: $bgc2;
+    padding-bottom: 100px;
 
     .row-title {
         position: relative;
@@ -31,6 +32,50 @@
                 font-size: 98px;
                 letter-spacing: 10px;
             }
+        }
+    }
+
+
+
+    .swiper-container {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 500px;
+        background-color: $bgc;
+        overflow: hidden;
+
+        .imgBox {
+
+            width: 100%;
+
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .details {
+            color: $white;
+        }
+    }
+
+    .swiper-pagination {
+        // background-color: white;
+        cursor: pointer;
+
+        .swiper-pagination-bullet {
+            background-color: $white;
+
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: $yellow;
         }
     }
 }
