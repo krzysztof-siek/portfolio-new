@@ -1,0 +1,21 @@
+footer {
+    background-color: $bgc;
+
+    .footer-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .copyright {
+            color: $white;
+
+            .yellow {
+                color: $yellow;
+            }
+        }
+    }
+
+    .socials {
+        margin: 0;
+    }
+}
