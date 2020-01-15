@@ -1738,6 +1738,22 @@ header .page-up.show {
   font-style: italic;
 }
 
+.contact .form-sent {
+  padding-top: 20px;
+  text-align: center;
+  color: #fdc66a;
+  display: none;
+}
+
+.contact .form-sent.show {
+  display: block;
+}
+
+.contact .form-sent i {
+  color: green;
+  font-size: 24px;
+}
+
 footer {
   background-color: #0c0c0c;
 }

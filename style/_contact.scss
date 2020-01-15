@@ -145,5 +145,22 @@
             font-style: italic;
         }
 
+
+    }
+
+    .form-sent {
+        padding-top: 20px;
+        text-align: center;
+        color: $yellow;
+        display: none;
+
+        &.show {
+            display: block;
+        }
+
+        i {
+            color: green;
+            font-size: 24px;
+        }
     }
 }

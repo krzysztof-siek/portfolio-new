@@ -201,7 +201,12 @@ window.addEventListener('load', (event) => {
             return
         }
         form.submit();
-        console.log('Formularz wysłany');
+        const formSent = document.querySelector('.form-sent')
+        formSent.classList.add('show')
+        hideSentForm = () => {
+            formSent.classList.remove('show')
+        }
+        setTimeout(hideSentForm, 3000);
 
     }
     form.addEventListener('submit', validateForm)
