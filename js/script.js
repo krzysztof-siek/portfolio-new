@@ -200,7 +200,11 @@ window.addEventListener('load', (event) => {
         if (errorValues.indexOf(true) > -1) {
             return
         }
-        form.submit();
+        name = name.value;
+        email = email.value;
+        message = message.value;
+
+        form.submit(name, email, message);
         const formSent = document.querySelector('.form-sent')
         formSent.classList.add('show')
         hideSentForm = () => {
