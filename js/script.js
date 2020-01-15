@@ -102,43 +102,43 @@ window.addEventListener('load', (event) => {
 
         } else if (data == "css") {
             technology.textContent = "CSS"
-            description.textContent = "Wykorzystuję Scss, aby kod który pisze był czytelniejszy"
+            description.textContent = "Wykorzystuję Scss, aby kod który pisze był czytelniejszy."
             content.style = "width: 80%"
             procent.textContent = "80%"
 
         } else if (data == "js") {
             technology.textContent = "JS"
-            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            description.textContent = "Korzystam z JavaScript w wersji ES5 w celu zapewnienia odpowiedniej funkcjonalności oraz przejżystości kodu"
             content.style = "width: 70%"
             procent.textContent = "70%"
 
         } else if (data == "react") {
-            technology.textContent = "react"
-            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            technology.textContent = "React"
+            description.textContent = "Wykorzystuję framework React, aby pisanie kodu było szybsze i bardziej efektywne"
             content.style = "width: 60%"
             procent.textContent = "60%"
 
         } else if (data == "bootstrap") {
             technology.textContent = "Bootstrap"
-            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            description.textContent = "Potrafię równiez posługiwać się tym frameworkiem Css"
             content.style = "width: 80%"
             procent.textContent = "80%"
 
         } else if (data == "sass") {
             technology.textContent = "Sass"
-            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            description.textContent = "Dużo fajniejsze pisanie kodu z wykorzystaniem praprocesora sass"
             content.style = "width: 70%"
             procent.textContent = "70%"
 
         } else if (data == "git") {
             technology.textContent = "Git i  Github"
-            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            description.textContent = "System kontroli wersji jest niezbędny przy pracy w większym teamie. Sam równiez trzymam swoje projekty na Github"
             content.style = "width: 70%"
             procent.textContent = "70%"
 
         } else if (data == "rwd") {
             technology.textContent = "Responsive Web Design"
-            description.textContent = "KORZYSTAM Z JAVASCRIPT W STANDARDZIE ES6 W CELU ZAPEWNIENIA ODPOWIEDNICH FUNKCJONALNOŚCI ORAZ PRZEJRZYSTOŚCI KODU.."
+            description.textContent = "W obecnych czasach ty wymóg, aby strony dopasowywały się do urządzenia na jakim są wyświetlane."
             content.style = "width: 80%"
             procent.textContent = "80%"
 
