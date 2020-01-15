@@ -1729,7 +1729,13 @@ header .page-up.show {
   padding: 10px;
   border: 1px solid #fff;
   font-size: 16px;
-  font-family: "Gothem", sans-serif;
+  font-family: "GothamBook", sans-serif;
+}
+
+.contact .contact-form .form-help-message {
+  color: red;
+  font-size: 12px;
+  font-style: italic;
 }
 
 footer {

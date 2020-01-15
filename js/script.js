@@ -143,10 +143,68 @@ window.addEventListener('load', (event) => {
             procent.textContent = "80%"
 
         }
-
-
-
     }))
 
 
+    // validacja formularza
+    const form = document.querySelector('#contact-form');
+    let name = document.getElementById('name')
+    let email = document.getElementById('email')
+    let message = document.getElementById('message')
+    const errors = {};
+    const helpMsgName = document.querySelector('.help-name')
+    const helpMsgEmail = document.querySelector('.help-email')
+    const helpMsgMessage = document.querySelector('.help-message')
+
+
+
+    validateName = (e) => {
+        if (e.target.value.length >= 5) {
+            errors[e.target.name] = false;
+            helpMsgName.textContent = "";
+        } else {
+            errors[e.target.name] = true;
+            helpMsgName.textContent = "Musisz wpisać więcej niż 5 znaków..."
+        }
+    }
+    name.addEventListener('blur', validateName);
+
+    validateEmail = (e) => {
+        if (e.target.value.length >= 5 && e.target.value.includes('@')) {
+            errors[e.target.name] = false;
+            helpMsgEmail.textContent = "";
+        } else {
+            errors[e.target.name] = true;
+            helpMsgEmail.textContent = "Email powinien zawierać @ oraz minimum 5 znaków..."
+        }
+    }
+
+    email.addEventListener('blur', validateEmail)
+
+
+    validateMessage = (e) => {
+        if (e.target.value.trim().length >= 15) {
+            errors[e.target.name] = false;
+            helpMsgMessage.textContent = "";
+        } else {
+            errors[e.target.name] = true;
+            helpMsgMessage.textContent = "Wiadomość powinna zawierać więcej niż 15 znaków..."
+        }
+    }
+    message.addEventListener('blur', validateMessage)
+
+
+    validateForm = (e) => {
+        e.preventDefault()
+        const errorValues = Object.values(errors);
+        if (errorValues.indexOf(true) > -1) {
+            return
+        }
+        form.submit();
+        console.log('Formularz wysłany');
+
+    }
+    form.addEventListener('submit', validateForm)
+
+    // End of validation
 });
