@@ -151,10 +151,12 @@ window.addEventListener('load', (event) => {
     let name = document.getElementById('name')
     let email = document.getElementById('email')
     let message = document.getElementById('message')
+    let submit = document.getElementById('submit')
     const errors = {};
     const helpMsgName = document.querySelector('.help-name')
     const helpMsgEmail = document.querySelector('.help-email')
     const helpMsgMessage = document.querySelector('.help-message')
+
 
 
 
@@ -204,7 +206,8 @@ window.addEventListener('load', (event) => {
         email = email.value;
         message = message.value;
 
-        form.submit(name, email, message);
+
+        form.submit();
         const formSent = document.querySelector('.form-sent')
         formSent.classList.add('show')
         hideSentForm = () => {

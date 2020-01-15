@@ -6,12 +6,15 @@ $to      = 'dalimibiszkopta@gmail.com';
 $subject = 'Wiadomość ze strony www.krzysztof-siek.pl';
 $from = $_POST['email'];
 $name = $_POST['name'];
-$message=$_POST['message'];
+$message = $_POST['message'];
 $emailbody = 
 	'Imie: '.$_POST['name']. "\n"
 	.'Telefon: '.$_POST['phone']. "\n"
 	.' Adres mailowy: '.$_POST['email']. "\n"
 	.'Wiadomosc: '.$_POST['message']. "\n";
    if(mail($to, $subject, $emailbody, $header)) 
-
+{
+   
+   echo "<script> window.location = \"index.html\" </script>";
+}
 ?>
