@@ -9,9 +9,10 @@ const $Element2 = document.getElementById('animBtn2');
 let frameIndex = 0;
 let timeoutId = undefined;
 
-let width = window.innerWidth;
+
 
 const resetText = function resetText() {
+    let width = window.innerWidth;
     if (width >= 768) {
         if (timeoutId !== undefined) clearTimeout(timeoutId);
         frameIndex = 0;
@@ -21,6 +22,7 @@ const resetText = function resetText() {
 }
 
 const setRandomText = function setRandomText() {
+    let width = window.innerWidth;
     if (width >= 768) {
         const text = Array.from({
             length: TEXT.length
@@ -31,6 +33,7 @@ const setRandomText = function setRandomText() {
 }
 
 const animate = function animate() {
+    let width = window.innerWidth;
     if (width >= 768) {
         if (frameIndex >= FRAME_COUNT) {
             resetText();

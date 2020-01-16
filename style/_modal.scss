@@ -1,0 +1,51 @@
+.modal-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+
+
+    &.hide {
+        display: none;
+    }
+
+    .modal-content {
+        background-color: $yellow;
+        margin: 20px;
+        padding: 20px;
+        max-width: 500px;
+        z-index: 1001;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        border-top-right-radius: 30px;
+
+
+        .modal-text {
+            font-family: "Gotham", sans-serif;
+            font-size: 24px;
+            line-height: 40px;
+            margin: 20px;
+        }
+
+        .fa-times-circle {
+            position: absolute;
+            top: -22px;
+            right: -20px;
+            z-index: 1001;
+            color: $yellow;
+
+        }
+    }
+}

@@ -62,6 +62,22 @@ window.addEventListener('load', (event) => {
     // show back to up button
     window.addEventListener('scroll', showBackToUpButton)
 
+    // modal when click download cv buttom
+    const downloadBtn = document.querySelector('.download');
+    const closeModalBtn = document.querySelector('.close-btn')
+    const modalBg = document.querySelector('.modal-bg');
+
+
+
+
+
+    closeModalBtn.addEventListener('click', () => {
+        modalBg.classList.add('hide')
+    })
+
+    downloadBtn.addEventListener('click', () => {
+        modalBg.classList.remove('hide')
+    })
 
 
     // skills change content when mouse on
