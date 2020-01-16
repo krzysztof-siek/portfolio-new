@@ -207,7 +207,9 @@ window.addEventListener('load', (event) => {
         message = message.value;
 
 
-        form.submit();
+        form.submit(function (e) {
+            e.preventDefault();
+        });
         const formSent = document.querySelector('.form-sent')
         formSent.classList.add('show')
         hideSentForm = () => {

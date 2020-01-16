@@ -3,7 +3,7 @@ $header  = "From: www.krzysztof-siek.pl \r\n";
 $header .= 'MIME-Version: 1.0'."\r\n";
 $header .= 'Content-type: text/html; charset=UTF-8'."\r\n";
 $to      = 'dalimibiszkopta@gmail.com';
-$subject = 'Wiadomość ze strony www.krzysztof-siek.pl';
+$subject = 'Message from your internet site www.krzysztof-siek.pl';
 $from = $_POST['email'];
 $name = $_POST['name'];
 $message = $_POST['message'];
