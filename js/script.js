@@ -11,6 +11,12 @@ import {
     closeNavLinks
 } from "./others.js"
 
+import {
+    resetText,
+    setRandomText,
+    animate
+} from './buttonAnim.js';
+
 
 
 window.addEventListener('load', (event) => {
@@ -127,4 +133,21 @@ window.addEventListener('load', (event) => {
     message.addEventListener('blur', validateMessage)
     form.addEventListener('submit', validateForm)
     // End of validation
+
+
+
+    // button animation 
+
+    const $Element = document.getElementById('animBtn');
+    const $Element2 = document.getElementById('animBtn2');
+
+
+    $Element.addEventListener('mouseenter', animate);
+    $Element.addEventListener('mouseout', resetText);
+    $Element2.addEventListener('mouseenter', animate);
+    $Element2.addEventListener('mouseout', resetText);
+
+
+    resetText();
+
 });

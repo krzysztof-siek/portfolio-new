@@ -42,13 +42,13 @@
         <div class="limit-container">
             <div class="heading">
                 <div class="img">
-                    <img src="./img/me1.png" alt="">
+                    <img src="./img/developer-photo/header-img.png" alt="">
                 </div>
                 <div class="heading-main">
                     <h3 class="main-welcome">Hey!</h3>
                     <h1 class="main-name">I'm <span>Krzysiek</span></h1>
                     <h2 class="main-prof">Front-end developer</h2>
-                    <a href="#contact" class="btn">Hire Me</a>
+                    <a href="#contact" class="btn anim" id="animBtn">Hire Me</a>
                     <div class="socials">
                         <a href="https://www.facebook.com/krzysztofjarzynaaa" target="_blank"><i
                                 class="fab fa-facebook-f"></i></a>
@@ -74,7 +74,7 @@
                 </div>
                 <div class="new-container">
                     <div class="about-img">
-                        <img src="./img/me2.png" alt="">
+                        <img src="./img/developer-photo/about-img.png" alt="">
                     </div>
                     <div class="about-info">
                         <h2 class="title-text">Krzysztof Siek</h2>
@@ -345,12 +345,12 @@
         <div class="limit-container">
             <div class="new-container">
                 <div class="jumbo-img">
-                    <img src="./img/hire222.png" alt="">
+                    <img src="./img/developer-photo/hireMe-img.png" alt="">
                 </div>
                 <div class="jumbo-info">
                     <h5 class="jumbo-title">I'm avaiable for Freelancer projects!</h5>
                     <h4 class="jumbo-subtitle">If you have any projects in mind, please hire me</h4>
-                    <a href="#contact" class="btn">Hire me!</a>
+                    <a href="#contact" class="btn anim" id="animBtn2">Hire me!</a>
                 </div>
             </div>
         </div>
@@ -392,8 +392,8 @@
             </div>
             <div class="contact-details">
                 <div class="photo">
-                    <img src="./img/contact-me.png" class="img1" alt="">
-                    <img src="./img/contact-me2.png" class="img2" alt="">
+                    <img src="./img/developer-photo/contact-desc-img.png" class="img1" alt="">
+                    <img src="./img/developer-photo/contact-mob-img.png" class="img2" alt="">
                 </div>
                 <div class="contact-icon">
                     <h4 class="contact-info"><i class="fas fa-phone-alt "></i>Phone</h4>
@@ -414,10 +414,10 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.5259608709016!2d16.96071031594986!3d52.39714325307903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b097322144b%3A0xc29cbe1ebff9e744!2sKatowicka%2053c!5e0!3m2!1spl!2spl!4v1578926325268!5m2!1spl!2spl"
                         width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
-                <form class="contact-form" id="contact-form" action="script.php" method="post">
-                    <input type="text" class="input" placeholder="Name" name='name' id="name" required>
+                <form class="contact-form" id="contact-form" action="script.php" method="post" novalidate>
+                    <input type="text" class="input name" placeholder="Name" name='name' id="name" required>
                     <p class="form-help-message help-name"></p>
-                    <input type="email" class="input" placeholder="Email" name='email' id="email" required>
+                    <input type="email" class="input email" placeholder="Email" name='email' id="email" required>
                     <p class="form-help-message help-email"></p>
                     <textarea name="message" class="input" placeholder="Message" name="message" rows="10" id="message"
                         required></textarea>

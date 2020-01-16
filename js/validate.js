@@ -13,6 +13,9 @@
      if (e.target.value.length >= 5) {
          errors[e.target.name] = false;
          helpMsgName.textContent = "";
+         const nameInput = document.querySelector('.name');
+         nameInput.classList.add('verify')
+
      } else {
          errors[e.target.name] = true;
          helpMsgName.textContent = "Musisz wpisać więcej niż 5 znaków..."
@@ -24,6 +27,8 @@
      if (e.target.value.length >= 5 && e.target.value.includes('@')) {
          errors[e.target.name] = false;
          helpMsgEmail.textContent = "";
+         const emailInput = document.querySelector('.email');
+         emailInput.classList.add('verify');
      } else {
          errors[e.target.name] = true;
          helpMsgEmail.textContent = "Email powinien zawierać @ oraz minimum 5 znaków..."
