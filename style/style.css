@@ -1377,6 +1377,10 @@ header .page-up.show {
   color: #fff;
 }
 
+.skills .progress-container .description {
+  line-height: 20px;
+}
+
 .skills .progress-container .technology {
   margin-bottom: 30px;
   font-size: 24px;

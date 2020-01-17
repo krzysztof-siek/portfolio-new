@@ -91,49 +91,49 @@ window.addEventListener('load', (event) => {
         const procent = document.querySelector(".procent")
         if (data == "html") {
             technology.textContent = "HTML"
-            description.textContent = "Wykorzystuję znaczniki zgodnie z semantyką i standardami W3C. Dobrze napisany kod HTML jest punktem wyjściowym do sukcesu funkcjonowania web aplikacji w sieci. "
+            description.textContent = "I use tags in accordance with W3C semantics and standards. Well-written HTML code is the starting point for the successful operation of web applications on the web. "
             content.style = "width: 80%"
             procent.textContent = "80%"
 
         } else if (data == "css") {
             technology.textContent = "CSS"
-            description.textContent = "Wykorzystuję Scss, aby kod który pisze był czytelniejszy."
+            description.textContent = "I use Scss to make the writing code easier to read."
             content.style = "width: 80%"
             procent.textContent = "80%"
 
         } else if (data == "js") {
-            technology.textContent = "JS"
-            description.textContent = "Korzystam z JavaScript w wersji ES5 w celu zapewnienia odpowiedniej funkcjonalności oraz przejżystości kodu"
+            technology.textContent = "JavaScript"
+            description.textContent = "I use JavaScript version ES6 to ensure proper functionality and transparency of the code"
             content.style = "width: 70%"
             procent.textContent = "70%"
 
         } else if (data == "react") {
             technology.textContent = "React"
-            description.textContent = "Wykorzystuję framework React, aby pisanie kodu było szybsze i bardziej efektywne"
+            description.textContent = "I use the React framework to make writing code faster and more efficient"
             content.style = "width: 60%"
             procent.textContent = "60%"
 
         } else if (data == "bootstrap") {
             technology.textContent = "Bootstrap"
-            description.textContent = "Potrafię równiez posługiwać się tym frameworkiem Css"
+            description.textContent = "I can also use this Css framework"
             content.style = "width: 80%"
             procent.textContent = "80%"
 
         } else if (data == "sass") {
             technology.textContent = "Sass"
-            description.textContent = "Dużo fajniejsze pisanie kodu z wykorzystaniem praprocesora sass"
+            description.textContent = "Much cooler code writing using the sass processor"
             content.style = "width: 70%"
             procent.textContent = "70%"
 
         } else if (data == "git") {
             technology.textContent = "Git i  Github"
-            description.textContent = "System kontroli wersji jest niezbędny przy pracy w większym teamie. Sam równiez trzymam swoje projekty na Github"
+            description.textContent = "A version control system is necessary when working in a larger team. I also keep my projects on Github myself"
             content.style = "width: 70%"
             procent.textContent = "70%"
 
         } else if (data == "rwd") {
             technology.textContent = "Responsive Web Design"
-            description.textContent = "W obecnych czasach ty wymóg, aby strony dopasowywały się do urządzenia na jakim są wyświetlane."
+            description.textContent = "Nowadays, you need pages to match the device on which they are displayed."
             content.style = "width: 80%"
             procent.textContent = "80%"
         }
