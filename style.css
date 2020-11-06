@@ -658,6 +658,11 @@ html {
   }
 }
 
+body.blocked {
+  height: 100vh;
+  overflow: hidden;
+}
+
 nav {
   background-color: #0c0c0c;
 }
@@ -685,8 +690,9 @@ nav .navbar .nav-links {
   padding: 100px 0;
   transition: .3s;
   z-index: 100;
-  background-color: rgba(12, 12, 12, 0.7);
+  background-color: rgba(12, 12, 12, 0.85);
   transform: translateY(-120%);
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
@@ -697,6 +703,7 @@ nav .navbar .nav-links {
     flex-direction: row;
     padding: 0;
     transform: translateY(0);
+    height: inherit;
   }
 }
 
@@ -794,7 +801,7 @@ nav .navbar .nav-button {
   align-items: flex-end;
   transition: .3s;
   position: fixed;
-  top: 20px;
+  top: 30px;
   right: 10px;
 }
 
@@ -1626,7 +1633,7 @@ footer .socials {
 
 .modal-bg .modal-content {
   background-color: #fdc66a;
-  margin: 20px;
+  margin: 20px 30px;
   padding: 20px;
   max-width: 500px;
   z-index: 1001;
@@ -1636,7 +1643,7 @@ footer .socials {
   align-items: center;
   text-align: center;
   position: relative;
-  border-top-right-radius: 30px;
+  border-top-right-radius: 50px;
 }
 
 .modal-bg .modal-content .modal-text {
@@ -1652,5 +1659,6 @@ footer .socials {
   right: -20px;
   z-index: 1001;
   color: #fdc66a;
+  font-size: 36px;
 }
 /*# sourceMappingURL=style.css.map */
