@@ -573,26 +573,28 @@ html {
 .socials {
   margin-top: 30px;
   display: flex;
+  width: 180px;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .socials a {
-  margin: 20px;
-  margin-left: 0;
   position: relative;
   z-index: 1;
   height: 40px;
   width: 40px;
-  border: 1px solid #333333;
+  border: 2px solid #fff;
   border-radius: 50%;
   transition: .3s;
+  opacity: .4;
 }
 
 .socials a:hover {
-  background-color: #fdc66a;
+  opacity: 1;
 }
 
 .socials a i {
-  color: #333333;
+  color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1573,6 +1575,7 @@ footer .footer-row {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
 }
 
 @media (min-width: 768px) {
