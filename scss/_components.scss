@@ -124,25 +124,27 @@
 .socials {
     margin-top: 30px;
     display: flex;
+    width: 180px;
+    justify-content: space-between;
+    align-items: center;
 
     a {
-        margin: 20px;
-        margin-left: 0;
         position: relative;
         z-index: 1;
         height: 40px;
         width: 40px;
-        border: 1px solid $grey2;
+        border: 2px solid $white;
         border-radius: 50%;
         transition: .3s;
+        opacity: .4;
 
         &:hover {
-            background-color: $yellow;
+            opacity: 1;
 
         }
 
         i {
-            color: $grey2;
+            color: $white;
             position: absolute;
             top: 50%;
             left: 50%;

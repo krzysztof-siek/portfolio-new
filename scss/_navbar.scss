@@ -1,3 +1,10 @@
+body {
+    &.blocked {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
 nav {
     background-color: $bgc;
 
@@ -25,8 +32,9 @@ nav {
             padding: 100px 0;
             transition: .3s;
             z-index: 100;
-            background-color: rgba(12, 12, 12, .7);
+            background-color: rgba(12, 12, 12, .85);
             transform: translateY(-120%);
+            height: 100vh;
 
             @media(min-width: 768px) {
                 position: static;
@@ -35,6 +43,7 @@ nav {
                 flex-direction: row;
                 padding: 0;
                 transform: translateY(0);
+                height: inherit;
             }
 
             &.open {
@@ -145,7 +154,7 @@ nav {
             align-items: flex-end;
             transition: .3s;
             position: fixed;
-            top: 20px;
+            top: 30px;
             right: 10px;
 
 

@@ -66,17 +66,19 @@ window.addEventListener('load', (event) => {
     const downloadBtn = document.querySelector('.download');
     const closeModalBtn = document.querySelector('.close-btn')
     const modalBg = document.querySelector('.modal-bg');
-
+    const body = document.querySelector('body')
 
 
 
 
     closeModalBtn.addEventListener('click', () => {
         modalBg.classList.add('hide')
+        body.classList.remove('blocked')
     })
 
     downloadBtn.addEventListener('click', () => {
         modalBg.classList.remove('hide')
+        body.classList.add('blocked')
     })
 
 
