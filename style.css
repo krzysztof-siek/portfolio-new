@@ -1149,7 +1149,6 @@ header .page-up.show {
 }
 
 .skills .icons-container {
-  background-color: green;
   display: flex;
   flex-wrap: wrap;
   padding: 20px;
