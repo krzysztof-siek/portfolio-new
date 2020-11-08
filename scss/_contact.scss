@@ -7,6 +7,15 @@
         }
     }
 
+    
+    .new-container {
+        flex-direction: column;
+
+        @media (min-width:992px) {
+            flex-direction: row;
+        }
+    }
+
     .contact-details {
         display: flex;
         flex-direction: column;
@@ -54,6 +63,7 @@
                 }
             }
         }
+
 
         .contact-icon {
             margin-bottom: 20px;
@@ -114,6 +124,11 @@
             height: 100%;
             min-height: 400px;
         }
+
+        @media(min-width:992px) {
+            width: 50%;
+            padding: 0 25px 0 20px;
+        }
     }
 
     .contact-form {
@@ -125,24 +140,31 @@
         order: 1;
         width: 90%;
 
-        @media(min-width:768px) {
+        @media(min-width:992px) {
             order: 2;
-            padding: 0 50px;
+            padding: 0 20px 0 25px;
             padding-bottom: 0;
+            width: 50%;
         }
 
         input,
         textarea {
             padding: 10px;
-            border: 1px solid $white;
-            font-size: 16px;
+            border: none;
+            font-size: 18px;
             font-family: "GothamBook", sans-serif;
             background-color: $white;
+            &:focus {
+                outline: none;
+            }
         }
 
         .name,
         .email {
             background-color: $white;
+            &:focus {
+                outline: none;
+            }
 
             &.verify {
                 background: url('../img/verif.png');
@@ -151,11 +173,21 @@
                 background-color: $white;
             }
         }
+        .btn-small {
+            &:focus {
+                outline: none;
+            }
+        }
 
         .form-help-message {
             color: red;
             font-size: 12px;
             font-style: italic;
+            letter-spacing: 1.4px;
+            &.hide {
+                visibility: hidden;
+            }
+            
         }
 
 

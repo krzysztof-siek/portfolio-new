@@ -421,15 +421,16 @@
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.5259608709016!2d16.96071031594986!3d52.39714325307903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47045b097322144b%3A0xc29cbe1ebff9e744!2sKatowicka%2053c!5e0!3m2!1spl!2spl!4v1578926325268!5m2!1spl!2spl"
                         width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
-                <form class="contact-form" id="contact-form" action="script.php" method="post" novalidate>
+                <form class="contact-form" id="contact-form"  novalidate>
                     <input type="text" class="input name" placeholder="Name" name='name' id="name" required>
-                    <p class="form-help-message help-name"></p>
+                    <p class="form-help-message help-name hide">Musisz wpisać więcej niż 3 znaki...</p>
                     <input type="email" class="input email" placeholder="Email" name='email' id="email" required>
-                    <p class="form-help-message help-email"></p>
+                    <p class="form-help-message help-email hide">Podaj prawidłowy adres email...</p>
                     <textarea name="message" class="input" placeholder="Message" name="message" rows="10" id="message"
-                        required></textarea>
-                    <p class="form-help-message help-message"></p>
-                    <button class="btn btn-small " type="submit">Sent now</button>
+                    required></textarea>
+                    <p class="form-help-message help-message hide">Wiadomość powinna zawierać minimum 10 znaków</p>
+                    <button class="btn btn-small" type="submit" id='contactSubmit'  >Sent now</button>
+                </form>
             </div>
             <div class="form-sent">
                 <h5>Formularz został wysłany <i class="fas fa-check"></i> </h5>
@@ -457,6 +458,7 @@
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/gumshoe/dist/gumshoe.polyfills.min.js"></script>
     <script src="./js/swiper.min.js"></script>
     <script src="./js/script.js" type="module"></script>
+    <script src="./js/validate2.js"></script>
     <!-- <script src="./js/additional.js" type="module"></script> -->
 </body>
 
