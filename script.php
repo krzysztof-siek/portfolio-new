@@ -1,5 +1,5 @@
 <?php
-$header  = "From: www.krzysztof-siek.pl \r\n";
+$header  = "From: https://krzysztof-siek.netlify.app/ \r\n";
 $header .= 'MIME-Version: 1.0'."\r\n";
 $header .= 'Content-type: text/html; charset=UTF-8'."\r\n";
 $to      = 'dalimibiszkopta@gmail.com';
