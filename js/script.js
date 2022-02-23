@@ -109,9 +109,9 @@ window.addEventListener('load', (event) => {
             content.style = "width: 70%"
             procent.textContent = "70%"
 
-        } else if (data == "react") {
-            technology.textContent = "React"
-            description.textContent = "I use the React framework to make writing code faster and more efficient"
+        } else if (data == "angular") {
+            technology.textContent = "Angular"
+            description.textContent = "I use the Angular framework to make writing code faster and more efficient"
             content.style = "width: 60%"
             procent.textContent = "60%"
 

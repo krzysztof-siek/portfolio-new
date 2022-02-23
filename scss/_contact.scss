@@ -87,11 +87,12 @@
                 color: $white;
                 text-transform: uppercase;
                 font-family: "Gotham", sans-serif;
-                line-height: 30px;
+                line-height: 20px;
+                margin-bottom: 10px;
 
 
                 @media(min-width: 768px) {
-                    line-height: 55px;
+                    line-height: 20px;
 
                 }
             }
@@ -100,6 +101,7 @@
                 color: $white;
                 opacity: 0.5;
                 font-size: 14px;
+                margin-top: 10px;
             }
         }
     }

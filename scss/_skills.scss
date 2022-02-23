@@ -29,6 +29,17 @@
             width: 100px;
             margin: 20px;
 
+            &.angular {
+              background-color: white;
+              display: flex;  
+              justify-content: center;
+              align-items: center;
+              img {
+              height: 80%;
+              width: 80%;
+              }
+            }
+
             &:nth-child(7) {
                 background-color: white;
             }
@@ -86,7 +97,7 @@
 
                 .procent {
                     position: absolute;
-                    top: -30px;
+                    top: -40px;
                     right: -30px;
                     color: $white;
                 }

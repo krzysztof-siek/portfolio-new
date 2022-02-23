@@ -71,7 +71,7 @@
     img {
         border: 1px solid $yellow;
         border-radius: 50%;
-        padding: 20px;
+        padding: 10px;
     }
 
     &:hover {
@@ -85,12 +85,14 @@
 
     .interests {
         position: absolute;
-        bottom: 0;
+        bottom: -50px;
         left: 50%;
         transform: translate(-50%, 0);
         font-size: 24px;
         text-transform: capitalize;
     }
+}
 
-
+.limit-container {
+  padding-bottom: 30px;
 }
